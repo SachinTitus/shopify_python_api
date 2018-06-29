@@ -1,4 +1,6 @@
+"""Mixin classes can be inherited by other classes for additional functionality. """
 import shopify.resources
+
 
 class Countable(object):
 
@@ -7,6 +9,11 @@ class Countable(object):
         if _options is None:
             _options = kwargs
         return int(cls.get("count", **_options))
+
+
+""" Metafields provide custom fields to entities such as products, orders and customers.
+Example metafields: (namespace = "Instructions", key = "wash", value = "warm water")
+"""
 
 
 class Metafields(object):

@@ -26,6 +26,7 @@ class ShopifyConnection(pyactiveresource.connection.Connection):
             raise
         return self.response
 
+
 # Inherit from pyactiveresource's metaclass in order to use ShopifyConnection
 class ShopifyResourceMeta(ResourceMeta):
 
